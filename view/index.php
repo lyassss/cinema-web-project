@@ -2,6 +2,9 @@
 include '../controller/filmC.php';
 $userC = new filmC();
 $listeUserC = $userC->afficherfilm();
+include '../controller/reservationC.php';
+$user = new reservationC();
+$listeUser = $user->afficherreservations();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -203,119 +206,52 @@ https://templatemo.com/tm-571-hexashop
     <!-- ***** Main Banner Area End ***** -->
 
     <!-- ***** Men Area Starts ***** -->
-    <section class="section" id="men">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6">
-                    <div class="section-heading">
-                        <h2>Reservation</h2>
+    <section class="section" id="women">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="section-heading">
+                    <h2>Reservations</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="women-item-carousel">
+                    <div class="owl-women-item owl-carousel">
+
+                    <?php foreach ($listeUser as $reservation) { ?>
+    <div class="item">
+        <div class="thumb">
+            <div class="hover-content">
+                <!-- You can add any content related to the thumbnail here if needed -->
+            </div>
+        </div>
+
+        <div id="display-image">
+            <!-- You can display the image related to the reservation here if needed -->
+        </div>
+
+        <div class="down-content">
+            <h4 class="portfolio-caption-heading"><?php echo $reservation['nbr_places']; ?></h4>
+            <span class="portfolio-caption-subheading text-muted"><?php echo $reservation['num_salles']; ?></span>
+            
+            <!-- Button to ajoutreservation.php -->
+            
+        </div>
+    </div>
+<?php } ?>
+
+
+                       
                     </div>
                 </div>
             </div>
         </div>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="men-item-carousel">
-                        <div class="owl-men-item owl-carousel">
-                            <div class="item">
-                                <div class="thumb">
-                                    <div class="hover-content">
-                                        <ul>
-                                            <li><a href="single-product.html"><i class="fa fa-eye"></i></a></li>
-                                            <li><a href="single-product.html"><i class="fa fa-star"></i></a></li>
-                                            <li><a href="single-product.html"><i class="fa fa-shopping-cart"></i></a></li>
-                                        </ul>
-                                    </div>
-                                    <img src="assets/images/men-01.jpg" alt="">
-                                </div>
-                                <div class="down-content">
-                                    <h4>Classic Spring</h4>
-                                    <span>$120.00</span>
-                                    <ul class="stars">
-                                        <li><i class="fa fa-star"></i></li>
-                                        <li><i class="fa fa-star"></i></li>
-                                        <li><i class="fa fa-star"></i></li>
-                                        <li><i class="fa fa-star"></i></li>
-                                        <li><i class="fa fa-star"></i></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="thumb">
-                                    <div class="hover-content">
-                                        <ul>
-                                            <li><a href="single-product.html"><i class="fa fa-eye"></i></a></li>
-                                            <li><a href="single-product.html"><i class="fa fa-star"></i></a></li>
-                                            <li><a href="single-product.html"><i class="fa fa-shopping-cart"></i></a></li>
-                                        </ul>
-                                    </div>
-                                    <img src="assets/images/men-02.jpg" alt="">
-                                </div>
-                                <div class="down-content">
-                                    <h4>Air Force 1 X</h4>
-                                    <span>$90.00</span>
-                                    <ul class="stars">
-                                        <li><i class="fa fa-star"></i></li>
-                                        <li><i class="fa fa-star"></i></li>
-                                        <li><i class="fa fa-star"></i></li>
-                                        <li><i class="fa fa-star"></i></li>
-                                        <li><i class="fa fa-star"></i></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="thumb">
-                                    <div class="hover-content">
-                                        <ul>
-                                            <li><a href="single-product.html"><i class="fa fa-eye"></i></a></li>
-                                            <li><a href="single-product.html"><i class="fa fa-star"></i></a></li>
-                                            <li><a href="single-product.html"><i class="fa fa-shopping-cart"></i></a></li>
-                                        </ul>
-                                    </div>
-                                    <img src="assets/images/men-03.jpg" alt="">
-                                </div>
-                                <div class="down-content">
-                                    <h4>Love Nana ‘20</h4>
-                                    <span>$150.00</span>
-                                    <ul class="stars">
-                                        <li><i class="fa fa-star"></i></li>
-                                        <li><i class="fa fa-star"></i></li>
-                                        <li><i class="fa fa-star"></i></li>
-                                        <li><i class="fa fa-star"></i></li>
-                                        <li><i class="fa fa-star"></i></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="thumb">
-                                    <div class="hover-content">
-                                        <ul>
-                                            <li><a href="single-product.html"><i class="fa fa-eye"></i></a></li>
-                                            <li><a href="single-product.html"><i class="fa fa-star"></i></a></li>
-                                            <li><a href="single-product.html"><i class="fa fa-shopping-cart"></i></a></li>
-                                        </ul>
-                                    </div>
-                                    <img src="assets/images/men-01.jpg" alt="">
-                                </div>
-                                <div class="down-content">
-                                    <h4>Classic Spring</h4>
-                                    <span>$120.00</span>
-                                    <ul class="stars">
-                                        <li><i class="fa fa-star"></i></li>
-                                        <li><i class="fa fa-star"></i></li>
-                                        <li><i class="fa fa-star"></i></li>
-                                        <li><i class="fa fa-star"></i></li>
-                                        <li><i class="fa fa-star"></i></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+    </div>
+</section>
     <!-- ***** Men Area Ends ***** -->
 
     <!-- ***** Women Area Starts ***** -->
@@ -334,20 +270,22 @@ https://templatemo.com/tm-571-hexashop
             <div class="col-lg-12">
                 <div class="women-item-carousel">
                     <div class="owl-women-item owl-carousel">
-                        <?php foreach ($listeUserC as $film) { ?>
-                            <div class="item">
-                                <div class="thumb">
-                                    <div class="hover-content">
-                                    </div>
-                                    <img class="img-fluid" alt="" src="<?php echo $film['img']; ?>" />
-                                    <div id="display-image"></div>
-                                </div>
-                                <div class="down-content">
-                                    <h4 class="portfolio-caption-heading"><?php echo $film['titre']; ?></h4>
-                                    <span class="portfolio-caption-subheading text-muted"><?php echo $film['ratings']; ?></span>
-                                </div>
-                            </div>
-                        <?php } ?>
+                    <?php foreach ($listeUserC as $film) { ?>
+    <div class="item">
+        <div class="thumb">
+            <div class="hover-content">
+                <!-- You can add any content related to the thumbnail here if needed -->
+            </div>
+            <img class="img-fluid" alt="" src="<?php echo $film['img']; ?>" />
+        </div>
+        <div class="down-content">
+            <h4 class="portfolio-caption-heading"><?php echo $film['titre']; ?></h4>
+            <span class="portfolio-caption-subheading text-muted"><?php echo $film['ratings']; ?></span>
+        </div>
+        <a href="ajoutreservation.php" class="btn btn-primary">Add Reservation</a>
+    </div>
+<?php } ?>
+
                     </div>
                 </div>
             </div>
