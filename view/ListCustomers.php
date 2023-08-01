@@ -2,7 +2,7 @@
 include '../Controller/CustomerC.php';
 $customerC = new CustomerC();
 $list = $customerC->listcustomers();
-$conn=mysqli_connect("localhost","root","","atelierphp");
+$conn=mysqli_connect("localhost","root","","cinema");
 $result =mysqli_query($conn,"SELECT * from customer");
 ?>
 <style>

@@ -276,7 +276,7 @@ https://templatemo.com/tm-571-hexashop
             <div class="hover-content">
                 <!-- You can add any content related to the thumbnail here if needed -->
             </div>
-            <img class="img-fluid" alt="" src="<?php echo $film['img']; ?>" />
+            <link href="https://www.youtube.com/watch?v=BdJKm16Co6M/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
         </div>
         <div class="down-content">
             <h4 class="portfolio-caption-heading"><?php echo $film['titre']; ?></h4>
